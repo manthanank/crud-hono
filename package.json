@@ -1,13 +1,17 @@
 {
   "name": "crud-hono",
+  "type": "module",
   "scripts": {
-    "start": "vercel dev",
-    "deploy": "vercel"
+    "dev": "tsx watch src/index.ts"
   },
   "dependencies": {
-    "hono": "^4.6.6"
+    "@hono/node-server": "^1.13.2",
+    "dotenv": "^16.4.5",
+    "hono": "^4.6.6",
+    "mongoose": "^8.7.2"
   },
   "devDependencies": {
-    "vercel": "^32.4.1"
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1"
   }
 }
