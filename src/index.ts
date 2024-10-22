@@ -2,6 +2,7 @@ import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import userRoutes from "./routes/user.routes.js";
 import connectDB from "./config/db.js";
+import { handle } from '@hono/node-server/vercel'
 
 const app = new Hono();
 
@@ -20,3 +21,5 @@ serve({
   fetch: app.fetch,
   port,
 });
+
+export default handle(app);
